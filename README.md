@@ -26,14 +26,15 @@ Cooperative Adaptive Cruise Control (CACC) platoons rely on GPS and Vehicle-to-V
 
 ```
 spoof-in-the-loop/
-├── simulation.py          # Main simulation — run this to reproduce all results
-├── requirements.txt       # Python dependencies
-├── figures/
-│   ├── fig1_gaps.png      # Fig. 2: Inter-vehicle gap dynamics (3 scenarios)
-│   ├── fig3_envelope.png  # Fig. 3: Safety envelope (spoof magnitude vs collision)
-│   └── fig4_latency.png   # Fig. 4: Detection latency + collision onset comparison
-├── results/
-│   └── summary.json       # All numerical results (collision times, AUC, latency)
+├── simulation (1).py               # Main simulation — run this to reproduce all results
+├── requirements.txt                # Python dependencies
+├── summary.json                    # All numerical results (collision times, AUC, latency)
+├── block_diagram_v2.drawio (1).png # Fig. 1: System model block diagram
+├── fig1_gaps.png                   # Fig. 2: Inter-vehicle gap dynamics (3 scenarios)
+├── fig3_envelope (1).png           # Fig. 3: Safety envelope (spoof magnitude vs collision)
+├── fig4_latency (1).png            # Fig. 4: Detection latency + collision onset
+├── .gitignore
+├── LICENSE
 └── README.md
 ```
 
@@ -50,7 +51,7 @@ pip install -r requirements.txt
 ### 2. Run the simulation
 
 ```bash
-python simulation.py
+python "simulation (1).py"
 ```
 
 This will:
@@ -117,14 +118,17 @@ SPOOF-IN-THE-LOOP SIMULATION
 
 ## Figures
 
+### Fig. 1 — System Model (Block Diagram)
+![System Model](block_diagram_v2.drawio%20(1).png)
+
 ### Fig. 2 — Inter-Vehicle Gap Dynamics
-![Gap Dynamics](figures/fig1_gaps.png)
+![Gap Dynamics](fig1_gaps.png)
 
 ### Fig. 3 — Safety Envelope
-![Safety Envelope](figures/fig3_envelope.png)
+![Safety Envelope](fig3_envelope%20(1).png)
 
 ### Fig. 4 — Detection Latency and Collision Onset
-![Detection Latency](figures/fig4_latency.png)
+![Detection Latency](fig4_latency%20(1).png)
 
 ---
 
